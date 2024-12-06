@@ -249,7 +249,34 @@ I’d say like 30 minutes
 You’re welcome.
 
 `,
-    
+    "5": `Hi, how are you?
+
+Good, sir. How are you?
+
+Good. I'll have the Teen Burger.
+
+It's for here or to go, sir?
+
+To go, please. And the combo, please.
+
+Fries and a root beer?
+
+Fries and root beer would be good, yup.
+
+That's everything? 
+
+And can I have a name for the order?
+
+It's $11.96, sir. Thank you.
+
+Thank you very much
+
+Here you go sir. The straws are over there. Have a good day.
+
+Thank you very much. See you.
+
+`,
+
 };
 
 // Azure Speech SDK 초기화
