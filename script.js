@@ -161,178 +161,95 @@ let pitchAnalyzer = {
 
 // 샘플 텍스트
 const sampleTexts = {
-    "1": `Callie?
+    "1": `Table for two, right?
+    
+Yes, two.
 
-Yes.
+Would you like to sit right here or there?
 
-Okay it’s $20.62
+Maybe in here out of the sun a little bit.
 
-Okay.
+Yeah, sure.
 
-Need a drink carrier?
-
-Umm I don’t think so. I think we’re all set.
-
-Okay.
-
-Yep, I’ve got two gift cards here.
-
-Okay and then $3.52 is the rest. One the screen first and then it’ll go to the next page.
-
-Okay.
-
-Did you want me to throw these away for you?
-
-Umm sure.
-
-Do you want straws for everything kor just the frappe?
-
-Yeah, I guess so we’ll take straws. thank you so much.
-
-Have a good one.
-
-You too.`
+This works, Thanks.
+`
     ,
 
 
-    "2": `I’ll go for honey rosemary latte.
+    "2": `Excuse me. 
 
-For the honey rosemary. We’re out of that syrup but we can do honey lavender if you’d like.
+Yeah?
 
-Sure, is it pretty sweet?
+Can I get a small box for takeout?
 
-Um... it’s not super sweet.
+Yeah, sure.
 
-Ok.
+Okay. Thank you.
 
-We can make it like half sweet if you wanted to. For the 16 Ounce we put 3 Ounces of it so we can do like one and a half.
+Just in a moment.
 
-Okay, I’ll go for 12.
+Yep, no problem.
 
-A 12 Ounce? Okay. You okay with whole milk in that? 
-
-Sure.
-
-We also have almond and oat milk.
-
-Umm, almond please.
 `,
     
-    "3": `Hi, I'd like a tall white chocolate mocha. 
+    "3": `Hi, can I help you?
+    
 
-Okay, do you want it hot or iced? 
-
-Hot please.
-
-Alright.  
-
-And then may I have the banana nut bread?
-
-Yeah absolutely, did you want it warmed up? 
-
-Yes, warmed up please. 
-
-What's a good name for your order?
-
-Arianna. 
-
-Alright it's gonna $9.43. 
-
-Thank you. 
-
-No problem. You doing Apple pay? 
-
-Yes.  
-
-Ok. It should be ready for you on the screen. Awesome. Do you need a receipt? 
-
-Yes please. 
-
-Alrighty. Here you go.
-
-Thank you. 
-
-Yeah, we’ll have it right out.
-
-Thanks.
-`,
-
-    "4": `Hello.
-
-Can I get a vanilla latte iced please?
-
-Yes, of course. Do you want the cream on top?
-
-Yes, please. Is it super sweet?
-
-It’s not super sweet, it is subtly sweet.
-
-Is there anything you would recommend? Or is it the best that way?
-
-I think it is the best that way or you can taste it and I can add more syrup.
-
-Oh, ok that’s fine. I’ll get the iced vanilla latte.
-
-Iced latte? 
-
-Yes.
-
-You mean the cream on the top right?
-
-Yeah Yeah.
-
-Regular milk is okay for you?
+Yeah, is this Thai Kitchen?
 
 Yeah.
 
-Anything else?
+Yeah, can I place an order for pickup?
 
-That’s it.
+What would you like?
 
-Can I get a name for the order please?
+Can I get Thai fired rice with the chicken?
 
-Red.
+How spicy?
 
-Sorry?
+Uh, three. 
 
-Red, like the color.
+Three. Anything else?
 
-Red? Okay.
+Yeah, can I have a pad thai with chicken? Spice level one.
+
+Everything on the lunch special right?
+
+I'm sorry?
+
+You want a lunch special size or regular size?
+
+Yeah, like a lunch special, if you guys have it.
+
+
 `,
 
-    "5": `Hello.
+    "4": `I actually have a question for box d. Can I do that with no egg?
 
-Hello, what is the difference of the first one and the second one?
+The box d is pad kee mao and regular is without egg, mam.
 
-The first one is goint to be einspanner latte which is the latte with the cream on top and Vienna einspanner is americano with the cream on top.
+Ok. There’s no egg already
 
-Oh, I’ll get the second one.
+Yes mam
 
-Vienna eispanner then. it is gonna be espresso with water with the cream on top.
+Ok then I’ll do the box d with vegetables.
 
-Yeah.
+How spicy would you like?
 
-Iced? or Hot?
+I’ll do low spice like level I don’t know 1 maybe.
 
-Uh…. Hot
+Yeah, alright so low spice. Yes mam. Anything else mam?
 
-Ok, anything else for you?
+I think that’s it. how long is it gonna take?
 
-No, that’s all.
+I’d say like 30 minutes
 
-One hot Vienna einspanner it's $7.66.
+30 minutes ok got it thank you.
 
-Can I get a name for the order please?
+You’re welcome.
 
-Sammy.
-
-Sorry.
-
-Sammy.
-
-Sammy. Thank you.
 `,
-
+    
 };
 
 // Azure Speech SDK 초기화
