@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M I K O T O ni</title>
+
+    <!-- React 관련 스크립트 -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Azure Speech SDK -->
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    
+    <!-- 설정 파일 -->
+    <script src="config.js"></script>
+
+    <!-- PronunciationVisualizer 컴포넌트 -->
+    <script src="components/PronunciationVisualizer.js"></script>
+
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .sample-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+}
+        
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .status {
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .volume-indicator {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            margin: 10px 0;
+        }
+        
+        .volume-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+            transition: width 0.1s ease;
+        }
+        
+        .result-container {
+            margin-top: 20px;
+        }
+        
+        .score {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .feedback {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="loadingScreen" class="loading-screen">
+        <img src="loading image.JPG" alt="Loading...">
+    </div>
+
+    <div class="container">
+        <h1 class="text-4xl font-bold text-center my-8">M I K O T O-ni</h1>
+
+        <div class="sample-selector">
+            <button class="sample-btn px-4 py-2 bg-gray-500 text-white rounded" data-sample="1">Sample 1</button>
+            <button class="sample-btn px-4 py-2 bg-gray-500 text-white rounded" data-sample="2">Sample 2</button>
+            <button class="sample-btn px-4 py-2 bg-gray-500 text-white rounded" data-sample="3">Sample 3</button>
+            <button class="sample-btn px-4 py-2 bg-gray-500 text-white rounded" data-sample="4">Sample 4</button>
+            <button class="sample-btn px-4 py-2 bg-gray-500 text-white rounded" data-sample="5">Sample 5</button>
+        </div>
+
+        <div class="practice-text p-4 bg-white rounded shadow my-4"></div>
+
+        <div class="button-container">
+            <button id="playNative" class="px-4 py-2 bg-green-500 text-white rounded">Play Native Speaker</button>
+            <button id="startRecording" class="px-4 py-2 bg-blue-500 text-white rounded">Start Speaking</button>
+            <button id="stopRecording" class="px-4 py-2 bg-red-500 text-white rounded" disabled>Stop Recording</button>
+        </div>
+
+        <div id="status" class="status text-gray-600"></div>
+
+        <div id="volumeIndicator" class="volume-indicator">
+            <div id="volumeBar" class="volume-bar"></div>
+        </div>
+
+        <div id="resultContainer" class="result-container">
+            <div id="pronunciationScore" class="score"></div>
+            <div id="feedback" class="feedback"></div>
+            <div id="pronunciationVisualizer" class="w-full max-w-4xl mx-auto"></div>
+            <div id="pitchScore"></div>
+            <div class="chart-container">
+                <canvas id="audioVisualizer"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 스크립트 -->
+    <script src="script.js"></script>
+</body>
+</html>
