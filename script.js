@@ -194,7 +194,6 @@ Yep, no problem.
     
     "3": `Hi, can I help you?
     
-
 Yeah, is this Thai Kitchen?
 
 Yeah.
@@ -224,15 +223,15 @@ Yeah, like a lunch special, if you guys have it.
 
 `,
 
-    "4": `I actually have a question for box d. Can I do that with no egg?
+    "4": `I actually have a question for box D. Can I do that with no egg?
 
-The box d is pad kee mao and regular is without egg, mam.
+The box D is pad kee mao and regular is without egg, mam.
 
 Ok. There’s no egg already
 
 Yes mam
 
-Ok then I’ll do the box d with vegetables.
+Ok then I’ll do the box D with vegetables.
 
 How spicy would you like?
 
